@@ -9,13 +9,13 @@ test.py - generator boosters for 1 display (6 cards commons, seventh card - rare
 
 
 Known bugs:
-1) In function:
-`#функция генерации частых карт
-def usually6():
-    random_index = random.randint(0, len(usually) - 1)
-    c=(usually[random_index])
-    #usually.remove(usually[random_index])#здесь оставляю remove чтобы в рамках одного бустера не повторялись частые карты, чтобы было красиво
-    buster.append(c)`
+1) In function:  
+`#функция генерации частых карт  
+def usually6():  
+    random_index = random.randint(0, len(usually) - 1)  
+    c=(usually[random_index])  
+    #usually.remove(usually[random_index])#здесь оставляю remove чтобы в рамках одного бустера не повторялись частые карты, чтобы было красиво  
+    buster.append(c)`  
 
 i commented out string for it will be work correctly for open 24 packs in display
 if i just open 1 booster pack and this string is not coomented out - all 6 common cards in result is different
