@@ -7,6 +7,8 @@ In https://github.com/mnsd11/TCGBerserkOldBoosterPackGenerator/Cards/ all cards 
 test.py - generator boosters for 1 display (6 cards commons, seventh card - rare or ultra)
 (One display have 2 ultra cards).
 
+Python version (later will be written it on Swift)
+
 
 Known bugs:
 1) In function:  
