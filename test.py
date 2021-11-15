@@ -2,27 +2,28 @@ import random
 
 ultras=['1','6','9','11','14','18','21','30']
 rares=['2','10','15','16','22','25','27']
-usually=['3','4','5','7','8','12','13','17','19','20','23','24','26','28','29']
 
 buster=[]
 list7=[]
+
 
 #all=ultras+rares+usually
 #len(all) проверка на корректность
 
 #1 дисплей карт = 24 бустера, 2 ультры будет на дисплей
 
-#функция генерации частых карт
-def usually6():
-    random_index = random.randint(0, len(usually) - 1)
-    c=(usually[random_index])
-    #usually.remove(usually[random_index])#здесь оставляю remove чтобы в рамках одного бустера не повторялись частые карты, чтобы было красиво
-    buster.append(c)
+
 
 #генерирую 6 обычных карт
 def openusually6():
-    for i in range(6):
-        usually6()
+    usually=['3','4','5','7','8','12','13','17','19','20','23','24','26','28','29']
+    for i in range(6):    
+        random_index = random.randint(0, len(usually) - 1)
+        c=(usually[random_index])
+        usually.remove(usually[random_index])#здесь оставляю remove чтобы в рамках одного бустера не повторялись частые карты, чтобы было красиво
+        buster.append(c)
+
+        
         
         
 #создаю функцию генерации ультра карт для добавления в массив
@@ -61,6 +62,7 @@ def open7card():
 def openbuster():
     openusually6()
     open7card()
+    
 
 #генерация дисплея и отображение списка id карт дисплея
 def opendisplay():
@@ -73,4 +75,3 @@ def opendisplay():
         
     
 opendisplay()
-
