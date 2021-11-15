@@ -6,17 +6,13 @@ rares=['2','10','15','16','22','25','27']
 buster=[]
 list7=[]
 
-
-#all=ultras+rares+usually
-#len(all) проверка на корректность
-
 #1 дисплей карт = 24 бустера, 2 ультры будет на дисплей
-
-
 
 #генерирую 6 обычных карт
 def openusually6():
     usually=['3','4','5','7','8','12','13','17','19','20','23','24','26','28','29']
+    #all=ultras+rares+usually
+    #len(all) проверка на корректность = 30 что все карточки из сэта распределены по спискам
     for i in range(6):    
         random_index = random.randint(0, len(usually) - 1)
         c=(usually[random_index])
