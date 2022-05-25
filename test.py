@@ -1,6 +1,7 @@
 import random
 import time
 start_time = time.time()
+elementwhereweareusecounter3rd=[]
 
 ultras=['1','6','9','11','14','18','21','30']
 rares=['2','10','15','16','22','25','27']
@@ -28,14 +29,16 @@ def openusually6():
 def open7ultras():
     random_index = random.randint(0, len(ultras) - 1)
     a=ultras[random_index]
+    elementwhereweareusecounter3rd.append(a)
     ultras.remove(ultras[random_index]) #здесь remove можно потому что ультра карт меньше намного чем элементов и ошибки не будет
     list7.append(a)
+     
 
 #создаю функцию, которая генерирует пару ультр для дисплея
 def generatingultrasforbox():
     for i in range(2):
         open7ultras()
-
+                
 
 #создаю функцию генерации редких карт для добавления в массив 
 def open7rares():
@@ -55,6 +58,7 @@ def open7card():
     b=list7[random_index]
     list7.remove(list7[random_index]) 
     buster.append(b)
+   
 
 #открытие бустера. генерация 6 карт и 7 карты
 def openbuster():
@@ -73,5 +77,5 @@ def opendisplay():
         
     
 opendisplay()
-
-print("--- %s seconds ---" % (time.time() - start_time))
+print("ultras in it ", elementwhereweareusecounter3rd)
+#print("--- %s seconds ---" % (time.time() - start_time))
