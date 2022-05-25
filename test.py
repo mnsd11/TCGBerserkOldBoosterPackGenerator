@@ -1,4 +1,6 @@
 import random
+import time
+start_time = time.time()
 
 ultras=['1','6','9','11','14','18','21','30']
 rares=['2','10','15','16','22','25','27']
@@ -71,3 +73,5 @@ def opendisplay():
         
     
 opendisplay()
+
+print("--- %s seconds ---" % (time.time() - start_time))
